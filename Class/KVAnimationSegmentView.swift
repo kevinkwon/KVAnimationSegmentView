@@ -20,7 +20,7 @@ open class KVAnimationSegmentAction {
     open var titleColor: UIColor?
 
     /// 타이틀 액션
-    open init(title: String, titleColor: UIColor? = nil, compeletion: (() -> Void)?) {
+    public init(title: String, titleColor: UIColor? = nil, compeletion: (() -> Void)?) {
         self.title = title
         self.compeletion = compeletion
         self.titleColor = titleColor
