@@ -1,4 +1,4 @@
-//
+ //
 //  KVAnimationSegmentView.swift
 //  WBActionSegmentView
 //
@@ -9,15 +9,15 @@
 import UIKit
 
 /// 세그 먼트 액션
-open class KVAnimationSegmentAction {
+public class KVAnimationSegmentAction {
     /// 타이틀 액션
-    open var title: String
+    public var title: String
 
     /// 타이틀 액션
-    open var compeletion: (() -> Void)?
+    public var compeletion: (() -> Void)?
 
     /// 컬러
-    open var titleColor: UIColor?
+    public var titleColor: UIColor?
 
     /// 타이틀 액션
     public init(title: String, titleColor: UIColor? = nil, compeletion: (() -> Void)?) {
