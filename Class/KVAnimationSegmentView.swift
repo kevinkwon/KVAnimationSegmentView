@@ -11,13 +11,13 @@ import UIKit
 /// 세그 먼트 액션
 open class KVAnimationSegmentAction {
     /// 타이틀 액션
-    var title: String
+    open var title: String
 
     /// 타이틀 액션
-    var compeletion: (() -> Void)?
+    open var compeletion: (() -> Void)?
 
     /// 컬러
-    var titleColor: UIColor?
+    open var titleColor: UIColor?
 
     /// 타이틀 액션
     init(title: String, titleColor: UIColor? = nil, compeletion: (() -> Void)?) {
@@ -31,14 +31,14 @@ open class KVAnimationSegmentAction {
 open class KVAnimationSegmentView: UIView {
 
     /// 라인을 좀더 넓게 표시할때
-    var lineInset = UIEdgeInsets.zero {
+    open var lineInset = UIEdgeInsets.zero {
         didSet {
             setNeedsLayout()
         }
     }
 
     /// lienHeight
-    var lineHeight: CGFloat = 1 {
+    open var lineHeight: CGFloat = 1 {
         didSet {
             setNeedsLayout()
         }
@@ -52,14 +52,14 @@ open class KVAnimationSegmentView: UIView {
     }()
 
     /// 컨텐트영역 여백
-    var contentInset: UIEdgeInsets = UIEdgeInsets.init(top: 0, left: 8, bottom: 0, right: 8) {
+    open var contentInset: UIEdgeInsets = UIEdgeInsets.init(top: 0, left: 8, bottom: 0, right: 8) {
         didSet {
             setNeedsLayout()
         }
     }
 
     /// 폰트가 변경
-    var font: UIFont = UIFont.systemFont(ofSize: UIFont.buttonFontSize) {
+    open var font: UIFont = UIFont.systemFont(ofSize: UIFont.buttonFontSize) {
         didSet {
             setNeedsDisplay()
             setNeedsLayout()
@@ -74,7 +74,7 @@ open class KVAnimationSegmentView: UIView {
     }
 
     /// 버튼 사이의 스페이싱, 기본값은 8
-    var spacing: CGFloat = 8 {
+    open var spacing: CGFloat = 8 {
         didSet {
             setNeedsLayout()
         }
