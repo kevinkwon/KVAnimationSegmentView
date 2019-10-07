@@ -10,7 +10,7 @@
 		0A04D2FA234B1DC800C44972 /* KVAnimationSegmentView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A04D2F0234B1DC800C44972 /* KVAnimationSegmentView.framework */; };
 		0A04D2FF234B1DC800C44972 /* KVAnimationSegmentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04D2FE234B1DC800C44972 /* KVAnimationSegmentViewTests.swift */; };
 		0A04D301234B1DC800C44972 /* KVAnimationSegmentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A04D2F3234B1DC800C44972 /* KVAnimationSegmentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A04D30F234B1EAE00C44972 /* KVSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04D30E234B1EAE00C44972 /* KVSegmentView.swift */; };
+		0A04D30F234B1EAE00C44972 /* KVAnimationSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04D30E234B1EAE00C44972 /* KVAnimationSegmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +30,7 @@
 		0A04D2F9234B1DC800C44972 /* KVAnimationSegmentViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVAnimationSegmentViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A04D2FE234B1DC800C44972 /* KVAnimationSegmentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVAnimationSegmentViewTests.swift; sourceTree = "<group>"; };
 		0A04D300234B1DC800C44972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A04D30E234B1EAE00C44972 /* KVSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVSegmentView.swift; sourceTree = "<group>"; };
+		0A04D30E234B1EAE00C44972 /* KVAnimationSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVAnimationSegmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 		0A04D30D234B1EAE00C44972 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				0A04D30E234B1EAE00C44972 /* KVSegmentView.swift */,
+				0A04D30E234B1EAE00C44972 /* KVAnimationSegmentView.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -205,7 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A04D30F234B1EAE00C44972 /* KVSegmentView.swift in Sources */,
+				0A04D30F234B1EAE00C44972 /* KVAnimationSegmentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

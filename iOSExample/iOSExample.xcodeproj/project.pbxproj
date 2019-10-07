@@ -14,7 +14,6 @@
 		0A04D327234B1EF300C44972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A04D325234B1EF300C44972 /* LaunchScreen.storyboard */; };
 		0A04D332234B1EF300C44972 /* iOSExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04D331234B1EF300C44972 /* iOSExampleTests.swift */; };
 		0A04D33D234B1EF300C44972 /* iOSExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04D33C234B1EF300C44972 /* iOSExampleUITests.swift */; };
-		0A04D352234B1F7400C44972 /* KVSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04D351234B1F7400C44972 /* KVSegmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,6 @@
 		0A04D338234B1EF300C44972 /* iOSExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A04D33C234B1EF300C44972 /* iOSExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSExampleUITests.swift; sourceTree = "<group>"; };
 		0A04D33E234B1EF300C44972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A04D351234B1F7400C44972 /* KVSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVSegmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +77,6 @@
 		0A04D310234B1EF200C44972 = {
 			isa = PBXGroup;
 			children = (
-				0A04D350234B1F7400C44972 /* Class */,
 				0A04D31B234B1EF200C44972 /* iOSExample */,
 				0A04D330234B1EF300C44972 /* iOSExampleTests */,
 				0A04D33B234B1EF300C44972 /* iOSExampleUITests */,
@@ -126,15 +123,6 @@
 				0A04D33E234B1EF300C44972 /* Info.plist */,
 			);
 			path = iOSExampleUITests;
-			sourceTree = "<group>";
-		};
-		0A04D350234B1F7400C44972 /* Class */ = {
-			isa = PBXGroup;
-			children = (
-				0A04D351234B1F7400C44972 /* KVSegmentView.swift */,
-			);
-			name = Class;
-			path = ../Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +257,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A04D31F234B1EF200C44972 /* ViewController.swift in Sources */,
-				0A04D352234B1F7400C44972 /* KVSegmentView.swift in Sources */,
 				0A04D31D234B1EF200C44972 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
