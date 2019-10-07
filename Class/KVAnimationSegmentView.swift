@@ -1,4 +1,4 @@
- //
+//
 //  KVAnimationSegmentView.swift
 //  WBActionSegmentView
 //
@@ -9,26 +9,29 @@
 import UIKit
 
 /// 세그 먼트 액션
-public class KVAnimationSegmentAction {
+open class KVAnimationSegmentAction {
     /// 타이틀 액션
-    public var title: String
+    open var title: String
 
     /// 타이틀 액션
-    public var compeletion: (() -> Void)?
-
-    /// 컬러
-    public var titleColor: UIColor?
+    open var compeletion: (() -> Void)?
 
     /// 타이틀 액션
-    public init(title: String, titleColor: UIColor? = nil, compeletion: (() -> Void)?) {
+    public init(title: String, compeletion: (() -> Void)?) {
         self.title = title
         self.compeletion = compeletion
-        self.titleColor = titleColor
     }
 }
 
 /// 액션이 있는 세그먼트 뷰
 open class KVAnimationSegmentView: UIView {
+
+    /// 타이틀 컬러
+    private var titleColorForNormal: UIColor?
+    /// 타이틀 하이라이트 컬러
+    private var titleColorForHighlighted: UIColor?
+    /// 타이틀 슬렉티드 컬러
+    private var titleColorForSelected: UIColor?
 
     /// 라인을 좀더 넓게 표시할때
     open var lineInset = UIEdgeInsets.zero {
@@ -144,6 +147,9 @@ open class KVAnimationSegmentView: UIView {
             // 버튼은 선택된 상태로 한다
             button.isSelected = (button.tag == currentIndex)
             button.titleLabel?.font = font
+            button.setTitleColor(titleColorForNormal, for: .normal)
+            button.setTitleColor(titleColorForHighlighted, for: .highlighted)
+            button.setTitleColor(titleColorForSelected, for: .selected)
         }
     }
 
@@ -198,8 +204,7 @@ open class KVAnimationSegmentView: UIView {
 
     /// 라인 컬러
     private func lineViewColor(at index: Int) -> UIColor? {
-        let button = buttons[index]
-        return button.tintColor
+        return titleColorForSelected
     }
 
     /// 무빙 에니메이션
@@ -221,13 +226,10 @@ extension KVAnimationSegmentView {
         // 버튼도 추가
         let button = UIButton.init(type: .custom)
         button.setTitle(action.title, for: .normal)
-        button.setTitleColor(.gray, for: .normal)
-        button.setTitleColor(.lightGray, for: .highlighted)
-        button.setTitleColor(button.tintColor, for: .selected)
+        button.setTitleColor(titleColorForNormal, for: .normal)
+        button.setTitleColor(titleColorForHighlighted, for: .highlighted)
+        button.setTitleColor(titleColorForSelected, for: .selected)
 
-        if let color = action.titleColor {
-            button.tintColor = color
-        }
         button.tag = (actions.count - 1)
         button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
 
@@ -236,6 +238,22 @@ extension KVAnimationSegmentView {
 
         // 재정렬 필요
         setNeedsLayout()
+    }
+
+
+    open func setTitleColor(_ color: UIColor?, for state: UIControl.State) {
+        switch state {
+        case .normal:
+            self.titleColorForNormal = color
+        case .highlighted:
+            self.titleColorForHighlighted = color
+        case .selected:
+            self.titleColorForSelected = color
+        default:
+            break
+        }
+
+        setNeedsDisplay()
     }
 }
 

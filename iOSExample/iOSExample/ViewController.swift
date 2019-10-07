@@ -38,7 +38,6 @@ class ViewController: UIViewController {
         segmentView.addAction(action)
         segmentView.addAction(action2)
         segmentView.addAction(action3)
-
     }
 }
 
