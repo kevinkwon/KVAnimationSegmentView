@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KVAnimationSegmentView
 
 class ViewController: UIViewController {
 

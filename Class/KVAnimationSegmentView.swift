@@ -9,7 +9,7 @@
 import UIKit
 
 /// 세그 먼트 액션
-class KVAnimationSegmentAction {
+open class KVAnimationSegmentAction {
     /// 타이틀 액션
     var title: String
 
@@ -28,7 +28,7 @@ class KVAnimationSegmentAction {
 }
 
 /// 액션이 있는 세그먼트 뷰
-class KVAnimationSegmentView: UIView {
+open class KVAnimationSegmentView: UIView {
 
     /// 라인을 좀더 넓게 표시할때
     var lineInset = UIEdgeInsets.zero {
@@ -98,7 +98,7 @@ class KVAnimationSegmentView: UIView {
     /// 버튼들
     private var buttons: [UIButton] = []
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         prepare()
     }
@@ -126,7 +126,7 @@ class KVAnimationSegmentView: UIView {
         action.compeletion?()
     }
 
-    override func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         super.draw(rect)
         debugPrint("draw")
 
@@ -147,7 +147,7 @@ class KVAnimationSegmentView: UIView {
         }
     }
 
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         debugPrint("layoutSubviews")
 
