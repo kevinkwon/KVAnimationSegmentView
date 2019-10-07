@@ -38,6 +38,10 @@ class ViewController: UIViewController {
         segmentView.addAction(action)
         segmentView.addAction(action2)
         segmentView.addAction(action3)
+
+        segmentView.setTitleColor(.black, for: .normal)
+        segmentView.setTitleColor(.lightGray, for: .highlighted)
+        segmentView.setTitleColor(.blue, for: .selected)
     }
 }
 

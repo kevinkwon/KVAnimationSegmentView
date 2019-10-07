@@ -113,8 +113,6 @@ open class KVAnimationSegmentView: UIView {
 
     /// 준비하는 함수
     private func prepare() {
-        // 테스트 코드
-        // self.backgroundColor = .lightGray
     }
 
     /// 버튼이 눌렸을 때 호출
@@ -131,7 +129,6 @@ open class KVAnimationSegmentView: UIView {
 
     override open func draw(_ rect: CGRect) {
         super.draw(rect)
-        debugPrint("draw")
 
         if showLine {
             if lineView.superview == nil {
@@ -155,7 +152,6 @@ open class KVAnimationSegmentView: UIView {
 
     override open func layoutSubviews() {
         super.layoutSubviews()
-        debugPrint("layoutSubviews")
 
         let contentRect = self.bounds.inset(by: contentInset)
 
@@ -240,7 +236,7 @@ extension KVAnimationSegmentView {
         setNeedsLayout()
     }
 
-
+    /// 상태에 따른 타이틀 컬러
     open func setTitleColor(_ color: UIColor?, for state: UIControl.State) {
         switch state {
         case .normal:
