@@ -182,8 +182,10 @@ open class KVAnimationSegmentView: UIView {
 
     /// 라인 프레임
     private func lineViewFrame(at index: Int) -> CGRect {
-        let action = actions[index]
-        let button = buttons[index]
+
+        guard let action = actions[optional: index] else { return .zero }
+        guard let button = buttons[optional: index] else { return .zero }
+
         let titleSize = self.titleSize(text: action.title, font: font)
 
         var width: CGFloat = titleSize.width
@@ -253,3 +255,9 @@ extension KVAnimationSegmentView {
     }
 }
 
+extension Array {
+    internal subscript (optional index: Int) -> Element? {
+        // iOS 9 or later
+        return indices ~= index ? self[index] : nil
+    }
+}
