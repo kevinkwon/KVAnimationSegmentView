@@ -40,6 +40,13 @@ open class KVAnimationSegmentView: UIView {
         }
     }
 
+    /// 라인 컬러
+    open var lineColor: UIColor = .blue {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+
     /// lienHeight
     open var lineHeight: CGFloat = 1 {
         didSet {
@@ -167,7 +174,7 @@ open class KVAnimationSegmentView: UIView {
 
         if showLine {
             lineView.frame = lineViewFrame(at: currentIndex)
-            lineView.backgroundColor = lineViewColor(at: currentIndex)
+            lineView.backgroundColor = lineViewColor()
         }
 
     }
@@ -201,8 +208,8 @@ open class KVAnimationSegmentView: UIView {
     }
 
     /// 라인 컬러
-    private func lineViewColor(at index: Int) -> UIColor? {
-        return titleColorForSelected
+    private func lineViewColor() -> UIColor? {
+        return lineColor
     }
 
     /// 무빙 에니메이션
